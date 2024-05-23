@@ -158,7 +158,7 @@
     function checking(){
         document.cookie =  "Username2 =" + document.getElementById("uName").value;
         document.cookie =  "Password2 =" + document.getElementById("pWord").value;
-        var cookie2 = document.cookie.split(";");
+        var cookie = document.cookie.split(";");
         cookie[1]= cookie[1].slice(9, cookie[1].length);
         cookie[2]= cookie[2].slice(9, cookie[2].length);
         cookie[6]= cookie[6].slice(9, cookie[6].length);
