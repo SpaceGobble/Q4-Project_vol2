@@ -157,8 +157,8 @@
     }
     function checking(){
         var cookie = document.cookie.split(";");
-        if(cookie[1] == ("Username =" + document.getElementById("uName").value) || cookie[4]== ("Email =" + document.getElementById("email").value)){
-            if(cookie[2] == ("Password =" + document.getElementById("pWord").value)){
+        if(cookie[1] == document.getElementById("uName").value || cookie[4]== document.getElementById("email").value){
+            if(cookie[2] == document.getElementById("pWord").value){
                 alert("You are now logged in");
                 document.getElementById("form").style.display = "none";
                 document.getElementById("p1").innerHTML = cookie[0];
