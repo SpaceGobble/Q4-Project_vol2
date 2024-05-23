@@ -156,9 +156,11 @@
         element.style.borderColor = "green";
     }
     function checking(){
+        document.cookie =  "Username =" + document.getElementById("uName").value;
+        document.cookie =  "Password =" + document.getElementById("pWord").value;
         var cookie = document.cookie.split(";");
-        if(cookie[1] == document.getElementById("uName").value || cookie[4]== document.getElementById("email").value){
-            if(cookie[2] == document.getElementById("pWord").value){
+        if(cookie[1] == cookie[6] || cookie[4]== cookie[6]){
+            if(cookie[2] == cookie[7]){
                 alert("You are now logged in");
                 document.getElementById("form").style.display = "none";
                 document.getElementById("p1").innerHTML = cookie[0];
