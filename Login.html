@@ -156,10 +156,14 @@
         element.style.borderColor = "green";
     }
     function checking(){
-        document.cookie =  "Username =" + document.getElementById("uName").value;
-        document.cookie =  "Password =" + document.getElementById("pWord").value;
-        var cookie = document.cookie.split(";");
-        if(cookie[1] == cookie[6] || cookie[4]== cookie[6]){
+        document.cookie =  "Username2 =" + document.getElementById("uName").value;
+        document.cookie =  "Password2 =" + document.getElementById("pWord").value;
+        var cookie2 = document.cookie.split(";");
+        cookie[1]= cookie[1].slice(9, cookie[1].length);
+        cookie[2]= cookie[2].slice(9, cookie[2].length);
+        cookie[6]= cookie[6].slice(9, cookie[6].length);
+        cookie[7]= cookie[7].slice(9, cookie[7].length);
+        if(cookie[1] == cookie[6]){
             if(cookie[2] == cookie[7]){
                 alert("You are now logged in");
                 document.getElementById("form").style.display = "none";
